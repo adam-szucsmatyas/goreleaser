@@ -17,8 +17,10 @@
           src = ./.;
           ldflags = [ "-s" "-w" "-X main.version=dev" "-X main.builtBy=flake" ];
           doCheck = false;
-          vendorHash = "";
+          vendorHash = "sha256-Z831RNML0A/oJmtG3kHCvdMgyC+ix2j25JbxtcZ/UnU=";
         };
+        
+        formatter = pkgs.nixpkgs-fmt;
 
         devShells.default = pkgs.mkShellNoCC {
           packages = with pkgs; [
